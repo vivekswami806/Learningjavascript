@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <form>
+         <input type="text" value="" id="text" placeholder="enter the name">
+         <button id="btn">click</button>
+      </form>
+      <script>
+        let btn=document.getElementById('btn')
+         let text=document.getElementById('text')
+         btn.addEventListener('click',(event)=>{
+             console.log(event)
+           let name="utsav"
+            event.preventDefault()
+            
+             let msg=text.value;
+            if(msg.length==0)
+              {
+        //         alert('you have to give >1')                 
+        //     }
+        //     if(name==msg)
+        //     {
+        //         alert('done')
+        //     }
+        //     else{
+        //         alert('not done')
+        //     }
+        //   console.log(msg)
+        }}) 
+        // let x={name:"utsav"}
+        //  localStorage.setItem('todo',JSON.stringify(x))
+        // let data= JSON.parse(localStorage.getItem('todo')) 
+        // console.log(data)
+        // localStorage.removeItem('todo')
+       
+       
+      </script>
+</body>
+</html>

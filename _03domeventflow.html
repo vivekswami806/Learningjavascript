@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #third{
+            height: 200px;
+            width: 200px;
+            background: #322121;
+            margin: auto;
+            margin-top: 20%;
+           
+        }
+        #mid{
+            height: 500px;
+            width: 500px;
+            background: #ef0707b5;
+           
+            margin: auto;
+            margin-top: 20%;
+
+        }
+        #first{
+            height: 800px;
+            width: 800px;
+            background: #08ef3a;
+         
+        }
+        
+        
+     
+        
+    </style>
+</head>
+<body>
+   <div id="first">1
+    <div id="mid">2
+        <div id="third">3
+
+        </div>
+    </div>
+   </div>
+     <script>
+        let  first= document.getElementById("first")
+        let mid= document.getElementById('mid')
+        let third= document.getElementById('third')
+          let body=document.querySelector('body')
+        first.addEventListener('click',(e)=>{
+            e.stopPropagation();
+         console.log('hii iam first');
+        },{capture:false});
+
+        mid.addEventListener("click",(e)=>{
+            e.stopPropagation();
+            console.log('hi i am mid');
+        },{capture:false});
+
+        third.addEventListener("click",(e)=>{
+            e.stopPropagation();
+            console.log('hi i am third');
+        },{capture:false});
+
+
+        body.addEventListener('click',(e)=>{
+            e.stopPropagation()
+            console.log('i am body');
+        },{capture:false})
+     </script>
+</body>
+</html>
